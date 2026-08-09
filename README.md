@@ -51,9 +51,9 @@ Search every file for the marker **`[PERSONALIZE]`**. The important ones live in
    meta tags. It is already set to **Clarity Automations**.
 4. **Your name / title**: About section; already set to **Zunaira Shaikh -
    Founder & AI Solutions Developer**.
-5. **Meta / Open Graph**: `og:url` and the canonical link are placeholders
-   (`[your-deployed-site-url]`). Replace them after deploying. `og:image`
-   expects `images/og-image.jpg` if you want a share preview card.
+5. **Meta / Open Graph**: `og:url` and the canonical link are set to the live
+   URL (`https://zunaira-shaikh.github.io/clarity-automations/`). `og:image`
+   expects `images/profile.png` for a share preview card.
 6. **Fonts**: IBM Plex Sans + IBM Plex Mono load from Google Fonts with a
    system-font fallback. You can remove the two `<link>` tags in the `<head>` if
    you prefer to go fully offline.
@@ -113,8 +113,7 @@ git push -u origin main
 4. Your site will be live at
    `https://zunaira-shaikh.github.io/clarity-automations/`.
 
-After the first deploy, replace the `[your-deployed-site-url]` placeholders in
-`index.html` (canonical + `og:url`) with the real URL.
+The canonical link and `og:url` are already set to the site's live URL.
 
 ---
 
