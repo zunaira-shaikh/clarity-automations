@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    ============================================================
+    CLARITY AUTOMATIONS - Personal AI Agency Website
+    Stack: HTML5 + CSS3 + jQuery (no build tools, no frameworks)
+    Deploy target: GitHub Pages
+    ============================================================
+
+    PERSONALIZATION: search the file for the marker  [PERSONALIZE]
+    to find every place you should review or edit (email, links, images).
+    -->
+
+  <title>Clarity Automations | AI Automation &amp; AI Agent Solutions</title>
+
+  <!-- [PERSONALIZE] Update this description if you want to tune it -->
+  <meta name="description" content="Clarity Automations builds practical AI agents, AI automation, and workflow integration for growing businesses. Founder-led AI solutions that remove repetitive work.">
+  <meta name="author" content="Zunaira Shaikh">
+  <meta name="theme-color" content="#faf9f7">
+
+  <!-- Open Graph (social sharing preview) -->
+  <!-- [PERSONALIZE] Replace og:url with your deployed site URL and og:image with an absolute image URL after deploying -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Clarity Automations | AI Automation &amp; AI Agent Solutions">
+  <meta property="og:description" content="Practical AI agents and automations that remove repetitive manual work from your business.">
+  <meta property="og:url" content="[your-deployed-site-url]">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:site_name" content="Clarity Automations">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Clarity Automations | AI Automation &amp; AI Agent Solutions">
+  <meta name="twitter:description" content="Practical AI agents and automations that remove repetitive manual work from your business.">
+
+  <!-- [PERSONALIZE] Replace with your deployed URL once the site is live -->
+  <link rel="canonical" href="[your-deployed-site-url]">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Fonts: IBM Plex Sans + IBM Plex Mono. Falls back to system fonts if offline. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    /* Toggle the .js hook so reveal animations only apply when JS is available.
+       Without JS the page still renders fully visible. */
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================ NAVIGATION ============================ -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="#home" aria-label="Clarity Automations, back to top">
+        <!-- Minimal geometric mark (same as favicon) -->
+        <svg class="brand-mark" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true" focusable="false">
+          <rect x="1" y="1" width="30" height="30" rx="7" fill="var(--ink)"/>
+          <rect x="9" y="12" width="14" height="8" rx="2" fill="var(--bg)"/>
+          <rect x="13" y="16" width="6" height="1.8" fill="var(--accent)"/>
+        </svg>
+        <span class="brand-name">Clarity&nbsp;Automations</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#about">About</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm" href="#contact">Let's Work Together</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Sentinel element used to detect "scrolled past top" without a scroll listener -->
+    <div id="top-sentinel" class="top-sentinel" aria-hidden="true"></div>
+
+    <!-- ============================ 1. HERO ============================ -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-copy reveal">
+          <p class="hero-brand">Clarity&nbsp;Automations</p>
+          <h1>AI solutions that automate <em>real work.</em></h1>
+          <p class="hero-sub">Practical AI agents and automations that remove repetitive manual work from your business.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Start a Project</a>
+            <a class="btn btn-secondary" href="#projects">View My Work</a>
+          </div>
+        </div>
+
+        <!--
+          Minimal workflow diagram (SVG, no images needed).
+          It illustrates the core promise: input flows through an AI workflow
+          and produces an automated action.
+        -->
+        <div class="hero-visual reveal" data-delay="120">
+          <svg class="flow-diagram" viewBox="0 0 560 190" role="img"
+               aria-label="A simple automation flow: incoming data enters an AI workflow and produces an automated action.">
+            <!-- Node 1: input -->
+            <rect x="14" y="70" width="152" height="46" rx="9" class="fd-node"/>
+            <text x="90" y="99" text-anchor="middle" class="fd-label">Incoming data</text>
+            <text x="90" y="152" text-anchor="middle" class="fd-caption">Email, data, requests</text>
+
+            <!-- Connector 1 -->
+            <line x1="166" y1="93" x2="202" y2="93" class="fd-line"/>
+            <path d="M202 93 l-8 -4 v8 z" class="fd-line fd-arrow"/>
+
+            <!-- Node 2: AI workflow (inverted) -->
+            <rect x="204" y="70" width="152" height="46" rx="9" class="fd-node fd-node-invert"/>
+            <rect x="224" y="90" width="8" height="8" rx="2" class="fd-accent"/>
+            <text x="304" y="99" text-anchor="middle" class="fd-label fd-label-invert">AI workflow</text>
+            <text x="280" y="152" text-anchor="middle" class="fd-caption">n8n, Gemini, Claude</text>
+
+            <!-- Connector 2 -->
+            <line x1="356" y1="93" x2="392" y2="93" class="fd-line"/>
+            <path d="M392 93 l-8 -4 v8 z" class="fd-line fd-arrow"/>
+
+            <!-- Node 3: output -->
+            <rect x="394" y="70" width="152" height="46" rx="9" class="fd-node"/>
+            <text x="470" y="99" text-anchor="middle" class="fd-label">Automated action</text>
+            <text x="470" y="152" text-anchor="middle" class="fd-caption">Alerts, records, reports</text>
+          </svg>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ 2. INTRO / TRUST ============================ -->
+    <section class="section section-tint" id="intro">
+      <div class="container">
+
+        <header class="section-head reveal">
+          <h2>Building Practical AI for Real Businesses</h2>
+          <p>We start with the process that costs you time, then design a reliable automation around it. AI where it genuinely helps, structured workflows where it doesn't.</p>
+        </header>
+
+        <div class="intro-grid">
+          <article class="intro-card reveal">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M20 12a8 8 0 1 1-2.34-5.66"/>
+              <path d="M20 3v5h-5"/>
+            </svg>
+            <h3>AI Automation</h3>
+            <p>Repetitive, rule-based work handled end to end.</p>
+          </article>
+
+          <article class="intro-card reveal" data-delay="60">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <circle cx="6" cy="12" r="2"/>
+              <circle cx="18" cy="12" r="2"/>
+              <path d="M8 12h8"/>
+            </svg>
+            <h3>AI Agents</h3>
+            <p>Agents that reason, keep context, and act across tools.</p>
+          </article>
+
+          <article class="intro-card reveal" data-delay="120">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="3" y="4" width="7" height="7"/>
+              <rect x="14" y="13" width="7" height="7"/>
+              <path d="M6.5 11v2a2 2 0 0 0 2 2h5.5"/>
+            </svg>
+            <h3>Workflow Integration</h3>
+            <p>The systems you already use, connected into one flow.</p>
+          </article>
+
+          <article class="intro-card reveal" data-delay="180">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="m8 8-4 4 4 4"/>
+              <path d="m16 8 4 4-4 4"/>
+              <path d="m13 5-2 14"/>
+            </svg>
+            <h3>Custom AI Solutions</h3>
+            <p>Built around your process, not a one-size-fits-all template.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ 3. SERVICES ============================ -->
+    <section class="section" id="services">
+      <div class="container">
+
+        <header class="section-head reveal">
+          <h2>What We Build</h2>
+          <p>Six ways we remove repetitive work with AI, each built on platforms you can audit and maintain.</p>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <span class="service-index" aria-hidden="true">01</span>
+            <h3>AI Agents</h3>
+            <p>Conversational and task-oriented agents that keep context, reason about your data, and take action, from research assistants to email triage.</p>
+          </article>
+
+          <article class="service-card reveal" data-delay="50">
+            <span class="service-index" aria-hidden="true">02</span>
+            <h3>AI Automation</h3>
+            <p>Reliable end-to-end automations that replace manual, repetitive processes with validated AI steps and clean error handling.</p>
+          </article>
+
+          <article class="service-card reveal" data-delay="100">
+            <span class="service-index" aria-hidden="true">03</span>
+            <h3>Workflow Automation</h3>
+            <p>Connected multi-step workflows that move work between your existing apps, with no copy-paste and no missed hand-offs.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-index" aria-hidden="true">04</span>
+            <h3>Custom AI Solutions</h3>
+            <p>Tailored AI built around your specific process, data, and constraints, designed to solve one real problem well.</p>
+          </article>
+
+          <article class="service-card reveal" data-delay="50">
+            <span class="service-index" aria-hidden="true">05</span>
+            <h3>AI Assistants</h3>
+            <p>Internal assistants that answer questions, summarize documents, and give your team accurate answers from your own knowledge.</p>
+          </article>
+
+          <article class="service-card reveal" data-delay="100">
+            <span class="service-index" aria-hidden="true">06</span>
+            <h3>API &amp; Tool Integration</h3>
+            <p>Secure integrations with the APIs and platforms you already use, with webhooks, validation, rate limiting, and monitoring built in.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ 4. HOW IT WORKS ============================ -->
+    <section class="section section-tint" id="process">
+      <div class="container">
+
+        <header class="section-head reveal">
+          <h2>Our Process</h2>
+          <p>Four stages, from understanding the problem to a system that keeps improving after launch.</p>
+        </header>
+
+        <ol class="process-list">
+          <li class="process-step reveal">
+            <span class="process-num" aria-hidden="true">01</span>
+            <h3>Discover</h3>
+            <p>We map the process that's costing you time and pin down where AI genuinely helps.</p>
+          </li>
+          <li class="process-step reveal" data-delay="80">
+            <span class="process-num" aria-hidden="true">02</span>
+            <h3>Design</h3>
+            <p>We architect the workflow, data flow, and integrations, including security and validation.</p>
+          </li>
+          <li class="process-step reveal" data-delay="160">
+            <span class="process-num" aria-hidden="true">03</span>
+            <h3>Build</h3>
+            <p>We develop and integrate the solution using proven platforms and APIs.</p>
+          </li>
+          <li class="process-step reveal" data-delay="240">
+            <span class="process-num" aria-hidden="true">04</span>
+            <h3>Deploy &amp; Improve</h3>
+            <p>We launch, monitor, and continuously optimize based on real usage.</p>
+          </li>
+        </ol>
+
+      </div>
+    </section>
+
+    <!-- ============================ 5. SOLUTIONS ============================ -->
+    <section class="section" id="solutions">
+      <div class="container">
+
+        <header class="section-head reveal">
+          <h2>AI Solutions for Business</h2>
+          <p>Practical use cases we build for growing businesses, each designed around a specific process problem.</p>
+        </header>
+
+        <div class="solutions-list">
+          <article class="solution reveal">
+            <h3>Customer Support Automation</h3>
+            <p>Resolve common questions instantly and route the rest to the right person.</p>
+          </article>
+          <article class="solution reveal" data-delay="40">
+            <h3>AI Lead Qualification</h3>
+            <p>Score and qualify leads automatically so your team focuses on real opportunities.</p>
+          </article>
+          <article class="solution reveal">
+            <h3>Document Processing</h3>
+            <p>Extract, validate, and organize information from emails, PDFs, and forms.</p>
+          </article>
+          <article class="solution reveal" data-delay="40">
+            <h3>Business Research Agents</h3>
+            <p>Gather and summarize market, competitor, and industry research on demand.</p>
+          </article>
+          <article class="solution reveal">
+            <h3>Internal Knowledge Assistants</h3>
+            <p>Give employees instant answers from your own documents and knowledge base.</p>
+          </article>
+          <article class="solution reveal" data-delay="40">
+            <h3>Automated Reporting</h3>
+            <p>Deliver accurate, scheduled reports without manual spreadsheet work.</p>
+          </article>
+          <article class="solution reveal">
+            <h3>Data Processing</h3>
+            <p>Clean, transform, and move data between systems reliably and consistently.</p>
+          </article>
+          <article class="solution reveal" data-delay="40">
+            <h3>Workflow Automation</h3>
+            <p>Connect the steps between your apps so work flows without manual hand-offs.</p>
+          </article>
+          <article class="solution reveal">
+            <h3>AI-Powered Notifications</h3>
+            <p>Send the right alert to the right person at the right time.</p>
+          </article>
+          <article class="solution reveal" data-delay="40">
+            <h3>Intelligent Task Automation</h3>
+            <p>Automate judgment-based tasks like triage, routing, and prioritization.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ 6. ABOUT / FOUNDER ============================ -->
+    <section class="section section-tint" id="about">
+      <div class="container about-grid">
+
+        <!--
+          [PERSONALIZE] Profile photo: drop your photo at  images/profile.png
+          (recommended 900x1100px, portrait). While the file is missing, a neutral
+          initials placeholder shows instead.
+        -->
+        <figure class="about-media reveal">
+
+          <span class="about-fallback" aria-hidden="true">ZS</span>
+          <img src="images/ChatGPT Image Aug 9, 2026, 06_23_03 PM.png" class="about-photo" width="900" height="1100"
+               alt="Portrait of Zunaira Shaikh, Founder &amp; AI Solutions Developer at Clarity Automations"
+               onerror="this.style.display='none';" loading="lazy">
+        </figure>
+
+        <div class="about-copy reveal" data-delay="80">
+          <h2>About the Founder</h2>
+          <p class="about-lead">I build practical AI systems that quietly remove repetitive work, so your team can focus on the work that matters.</p>
+
+          <p>I'm Zunaira, founder of Clarity Automations and an AI solutions developer. My work focuses on AI, AI agents, and AI automation: from secure webhook automations and email intelligence systems to conversational research agents built with n8n, Google Gemini, and the Anthropic Claude API.</p>
+
+          <p>I care about the details most automation projects skip: validating every input, handling errors cleanly, and designing workflows your team can actually rely on. No hype, no demo-ware. Just AI that works, maintained with the same care it was built with.</p>
+
+          <ul class="about-focus">
+            <li>AI &amp; AI Agents</li>
+            <li>AI Automation</li>
+            <li>Workflow Integration</li>
+            <li>Practical AI Systems</li>
+          </ul>
+
+          <div class="about-actions">
+            <a class="btn btn-primary" href="#contact">Start a Project</a>
+            <a class="btn btn-secondary" href="#certifications">Certifications</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ 7. CERTIFICATIONS ============================ -->
+    <section class="section" id="certifications">
+      <div class="container">
+
+        <header class="section-head reveal">
+          <h2>Certifications &amp; Credentials</h2>
+          <p>Verified coursework in AI automation and AI agents, issued in 2026.</p>
+        </header>
+
+        <div class="cert-list">
+
+          <!--
+            [PERSONALIZE] Each credential row references a real Coursera certificate.
+            To add a certificate image or logo, uncomment the <img> inside .cert-thumb
+            and drop the file in  images/certifications/.
+          -->
+          <article class="cert-row reveal">
+            <div class="cert-thumb">
+              <!--<img src="images/Coursera 4AQVOWEWSO5K.pdf"  alt="Integrate AI Models in n8n certificate" loading="lazy"> -->
+              <span class="cert-thumb-placeholder" aria-hidden="true">Doc</span>
+            </div>
+            <div class="cert-info">
+              <h3>Integrate AI Models in n8n: Prompt Engineering &amp; Outputs</h3>
+              <p class="cert-org">LearnKartS, offered through Coursera</p>
+              <p class="cert-date">July 2026</p>
+            </div>
+            <a class="cert-link" href="https://coursera.org/verify/4AQVOWEWSO5K" target="_blank" rel="noopener">View credential</a>
+          </article>
+
+          <article class="cert-row reveal" data-delay="60">
+            <div class="cert-thumb">
+               <!--<img src="images/Coursera G4PPJ23MWY42.pdf" alt="Workflow Automation with n8n certificate" loading="lazy"> -->
+              <span class="cert-thumb-placeholder" aria-hidden="true">Doc</span>
+            </div>
+            <div class="cert-info">
+              <h3>Workflow Automation with n8n: Logic, Data &amp; Error Handling</h3>
+              <p class="cert-org">LearnKartS, offered through Coursera</p>
+              <p class="cert-date">July 2026</p>
+            </div>
+            <a class="cert-link" href="https://coursera.org/verify/G4PPJ23MWY42" target="_blank" rel="noopener">View credential</a>
+          </article>
+
+          <article class="cert-row reveal" data-delay="120">
+            <div class="cert-thumb">
+               <!--<img src="images/Coursera YDDQ5OE7VZ52.pdf" alt="Build AI Agents & Secure API Integrations with n8n certificate" loading="lazy">-->
+              <span class="cert-thumb-placeholder" aria-hidden="true">Doc</span>
+            </div>
+            <div class="cert-info">
+              <h3>Build AI Agents &amp; Secure API Integrations with n8n</h3>
+              <p class="cert-org">LearnKartS, offered through Coursera</p>
+              <p class="cert-date">August 2026</p>
+            </div>
+            <a class="cert-link" href="https://coursera.org/verify/YDDQ5OE7VZ52" target="_blank" rel="noopener">View credential</a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ 8. PROJECTS ============================ -->
+    <section class="section section-tint" id="projects">
+      <div class="container">
+
+        <header class="section-head reveal">
+          <h2>Selected Work</h2>
+          <p>Real automations built by Clarity Automations, each one solving a specific business process.</p>
+        </header>
+
+        <div class="projects-grid">
+
+          <!--
+            [PERSONALIZE] Project screenshots: drop the real screenshot at
+             images/projects/<name>.png (exact filenames in images/projects/README.md).
+            The placeholder disappears automatically — no HTML edits needed.
+            Also replace href="#" on "View Project" with the real project URL or repo.
+          -->
+          <article class="project-card reveal">
+            <!-- [PERSONALIZE] "View Project" href="#" is a placeholder until a real URL/repo exists -->
+            <a class="project-media project-media-contain js-placeholder-link" href="#" aria-label="View Weather Alert Bot project">
+              <img src="images/projects/weather-alert-bot.png" alt="Weather Alert Bot n8n workflow" loading="lazy">
+            </a>
+            <div class="project-body">
+              <h3>Weather Alert Bot</h3>
+              <p>A weather monitoring automation built in n8n. It validates incoming requests, pulls real-time weather data, classifies severity, and sends automated alerts.</p>
+              <p class="project-problem"><strong>Problem it solves:</strong> replaces manual weather monitoring with a secure, validated alert system that only notifies when weather actually warrants it.</p>
+              <ul class="project-tech" aria-label="Technologies used">
+                <li>n8n</li>
+                <li>Webhooks</li>
+                <li>HMAC security</li>
+                <li>Rate limiting</li>
+                <li>Weather API</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn btn-ghost btn-sm js-placeholder-link" href="#">View Project</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/zunaira-shaikh" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-delay="60">
+            <a class="project-media js-placeholder-link" href="#" aria-label="View AI Email Intelligence project">
+              <div class="project-media-placeholder">
+                <span class="project-mark">EI</span>
+                <span class="project-note">Screenshot coming soon</span>
+              </div>
+              <!-- [PERSONALIZE] Drop your screenshot at images/projects/ai-email-intelligence.png; it replaces the placeholder automatically -->
+              <img src="images/Screenshot 2026-08-09 201206.png" alt="AI Email Intelligence workflow" loading="lazy" onerror="this.style.display='none';">
+            </a>
+            <div class="project-body">
+              <h3>AI Email Intelligence</h3>
+              <p>Monitors incoming Gmail, classifies each message with rule-based logic, routes it to the right process, and logs the outcome in Google Sheets.</p>
+              <p class="project-problem"><strong>Problem it solves:</strong> stops manual inbox triage by sending each email to the workflow it belongs in, automatically.</p>
+              <ul class="project-tech" aria-label="Technologies used">
+                <li>n8n</li>
+                <li>Gmail API</li>
+                <li>Google Sheets</li>
+                <li>Rules engine</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn btn-ghost btn-sm js-placeholder-link" href="#">View Project</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/zunaira-shaikh" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <a class="project-media js-placeholder-link" href="#" aria-label="View AI Research Agent project">
+              <div class="project-media-placeholder">
+                <span class="project-mark">RA</span>
+                <span class="project-note">Screenshot coming soon</span>
+              </div>
+              <!-- [PERSONALIZE] Drop your screenshot at images/projects/ai-research-agent.png; it replaces the placeholder automatically -->
+              <img src="images/Screenshot 2026-08-09 201634.png" alt="AI Research Agent conversation" loading="lazy" onerror="this.style.display='none';">
+            </a>
+            <div class="project-body">
+              <h3>AI Research Agent</h3>
+              <p>A conversational agent built with n8n and Google Gemini. It keeps context across the conversation and calls web search when it needs up-to-date information.</p>
+              <p class="project-problem"><strong>Problem it solves:</strong> turns scattered manual searching into an interactive assistant that answers follow-ups with current, sourced information.</p>
+              <ul class="project-tech" aria-label="Technologies used">
+                <li>n8n</li>
+                <li>Google Gemini</li>
+                <li>Web search</li>
+                <li>Conversation memory</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn btn-ghost btn-sm js-placeholder-link" href="#">View Project</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/zunaira-shaikh" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-delay="60">
+            <a class="project-media js-placeholder-link" href="#" aria-label="View Smart Email Classifier project">
+              <div class="project-media-placeholder">
+                <span class="project-mark">EC</span>
+                <span class="project-note">Screenshot coming soon</span>
+              </div>
+              <!-- [PERSONALIZE] Drop your screenshot at images/projects/smart-email-classifier.png; it replaces the placeholder automatically -->
+              <img src="images/Screenshot 2026-08-09 201928.png" alt="Smart Email Classifier workflow" loading="lazy" onerror="this.style.display='none';">
+            </a>
+            <div class="project-body">
+              <h3>Smart Email Classifier</h3>
+              <p>An AI email workflow that classifies and summarizes incoming Gmail, validates the AI output, and fails over to the Anthropic Claude API when the primary model is unavailable.</p>
+              <p class="project-problem"><strong>Problem it solves:</strong> adds resilience to automated email processing with a multi-model fallback, so classification keeps working under load.</p>
+              <ul class="project-tech" aria-label="Technologies used">
+                <li>n8n</li>
+                <li>Gmail API</li>
+                <li>Claude API</li>
+                <li>JSON validation</li>
+              </ul>
+              <div class="project-actions">
+                <a class="btn btn-ghost btn-sm js-placeholder-link" href="#">View Project</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/zunaira-shaikh" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="section-footnote reveal">More projects and screenshots are added here as each build is documented.</p>
+
+      </div>
+    </section>
+
+    <!-- ============================ 9. TECHNOLOGIES ============================ -->
+    <section class="section" id="technologies">
+      <div class="container">
+
+        <header class="section-head reveal">
+          <h2>Tools &amp; Technologies</h2>
+          <p>The stack behind every build, chosen for reliability and easy maintenance.</p>
+        </header>
+
+        <!-- [PERSONALIZE] Add or remove items here as your toolkit grows -->
+        <div class="tech-list">
+          <div class="tech-item reveal"><span class="tech-name">HTML</span><span class="tech-desc">Semantic structure</span></div>
+          <div class="tech-item reveal" data-delay="30"><span class="tech-name">CSS</span><span class="tech-desc">Responsive styling</span></div>
+          <div class="tech-item reveal" data-delay="60"><span class="tech-name">JavaScript</span><span class="tech-desc">Front-end logic</span></div>
+          <div class="tech-item reveal" data-delay="90"><span class="tech-name">jQuery</span><span class="tech-desc">Interaction layer</span></div>
+          <div class="tech-item reveal" data-delay="120"><span class="tech-name">REST APIs &amp; Webhooks</span><span class="tech-desc">System integration</span></div>
+          <div class="tech-item reveal" data-delay="150"><span class="tech-name">AI Models</span><span class="tech-desc">Gemini, Claude &amp; more</span></div>
+          <div class="tech-item reveal" data-delay="180"><span class="tech-name">AI Agents</span><span class="tech-desc">Reasoning plus tools</span></div>
+          <div class="tech-item reveal" data-delay="210"><span class="tech-name">Automation Platforms</span><span class="tech-desc">n8n</span></div>
+          <div class="tech-item reveal" data-delay="240"><span class="tech-name">GitHub</span><span class="tech-desc">Version control &amp; Pages</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ 10. CONTACT ============================ -->
+    <section class="section section-tint" id="contact">
+      <div class="container">
+
+        <header class="section-head reveal">
+          <h2>Have a Process That Could Be Automated?</h2>
+          <p>Let's discuss how AI and automation can improve your workflow.</p>
+        </header>
+
+        <div class="contact-grid">
+
+          <div class="contact-info reveal">
+            <h3>Contact details</h3>
+
+            <!-- [PERSONALIZE] This email drives both the mailto link and the form mailto builder -->
+            <a class="contact-email js-email" href="mailto:contact.clarityautomations@gmail.com">contact.clarityautomations@gmail.com</a>
+
+            <p class="contact-note">Prefer email? Write to us directly with a short summary of the process you'd like to automate, and we'll take it from there.</p>
+
+            <ul class="contact-links">
+              <li>
+                <a href="https://www.linkedin.com/in/zunaira-shaikh-b52a8939b/" target="_blank" rel="noopener">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://github.com/zunaira-shaikh" target="_blank" rel="noopener">GitHub</a>
+              </li>
+              <li>
+                <a class="js-email" href="mailto:contact.clarityautomations@gmail.com">Email</a>
+              </li>
+            </ul>
+          </div>
+
+          <!--
+            FRONTEND-ONLY FORM (by design).
+            On submit this builds a mailto: link and opens the visitor's email client
+            with the message pre-filled. It does NOT send email on its own.
+
+            To send from the site directly, connect a form backend:
+              Option A - Formspree:  set form action to https://formspree.io/f/YOUR_FORM_ID
+              Option B - EmailJS:    install their JS SDK and replace the submit handler in js/script.js
+              Option C - Netlify Forms: add data-netlify="true" to this <form> and deploy to Netlify.
+            Then remove the mailto logic marked in js/script.js.
+          -->
+          <form id="contact-form" class="contact-form reveal" data-delay="80" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+                <span class="form-error" id="name-error" role="alert"></span>
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                <span class="form-error" id="email-error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="company">Company <span class="form-optional">(optional)</span></label>
+              <input type="text" id="company" name="company" autocomplete="organization">
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <span class="form-error" id="message-error" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-note">This form opens your email client with your message pre-filled. For direct sending, connect a form service (see the code comment above).</p>
+            <p class="form-success" id="form-success" role="status" hidden>Opening your email client with the message pre-filled.</p>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-logo">Clarity Automations</p>
+          <p class="footer-tagline">Building practical AI solutions for modern businesses.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <ul class="footer-social" aria-label="Social links">
+          <li><a href="https://www.linkedin.com/in/zunaira-shaikh-b52a8939b/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/zunaira-shaikh" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a class="js-email" href="mailto:contact.clarityautomations@gmail.com">Email</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Clarity Automations. All rights reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+      <path d="M12 19V5"/><path d="m5 12 7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- Structured data (helps search engines understand the person + org). No invented facts. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Clarity Automations",
+        "email": "contact.clarityautomations@gmail.com",
+        "description": "Clarity Automations builds practical AI agents, AI automation, and workflow integration for growing businesses.",
+        "sameAs": [
+          "https://www.linkedin.com/in/zunaira-shaikh-b52a8939b/",
+          "https://github.com/zunaira-shaikh"
+        ]
+      },
+      {
+        "@type": "Person",
+        "name": "Zunaira Shaikh",
+        "jobTitle": "Founder & AI Solutions Developer",
+        "worksFor": { "@type": "Organization", "name": "Clarity Automations" },
+        "sameAs": [
+          "https://www.linkedin.com/in/zunaira-shaikh-b52a8939b/",
+          "https://github.com/zunaira-shaikh"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- jQuery + site scripts (load at the end so the page paints first).
+       Fallback to a second CDN if the first is unreachable (offline-first setups). -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>window.jQuery || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"><\/script>');</script>
+  <script src="js/script.js"></script>
+</body>
+</html>
