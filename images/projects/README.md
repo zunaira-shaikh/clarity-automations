@@ -8,22 +8,17 @@ until a real file exists, then the screenshot appears automatically. Just
 | Card                  | Expected filename              | Aspect ratio | Status |
 | --------------------- | ------------------------------ | ------------ | ------ |
 | Weather Alert Bot     | `weather-alert-bot.png`        | panoramic    | done (wired up) |
-| AI Email Intelligence | `ai-email-intelligence.png`    | 16:9         | missing |
-| AI Research Agent     | `ai-research-agent.png`        | 16:9         | missing |
-| Smart Email Classifier| `smart-email-classifier.png`   | 16:9         | missing |
+| AI Email Intelligence | `ai-email-intelligence.png`    | 16:9         | done (wired up) |
+| AI Research Agent     | `ai-research-agent.png`        | 16:9         | done (wired up) |
+| Smart Email Classifier| `smart-email-classifier.png`   | 16:9         | done (wired up) |
 
-## Steps to add one screenshot
+## Steps to replace one screenshot
 
-1. Add the image file here with the exact filename from the table
+1. Drop your replacement screenshot here with the exact filename from the table
    (1600x900px or similar, kept under ~300KB). Use a real screenshot, not a
    placeholder.
-2. Refresh the page. The placeholder on that card is replaced automatically —
+2. Refresh the page. That card shows the new screenshot automatically —
    nothing to edit in `index.html`.
-
-> Note: "missing" rows currently exist as **empty 0-byte files**. If you have
-> the real screenshot on your machine, copy it over the empty file (it must
-> stay at the same filename), or delete the empty file and add the image in its
-> place.
 
 ## "View Project" buttons
 

@@ -1,0 +1,11 @@
+# AI / editor tooling (not part of the website - never deploy these)
+.claude/
+.cursor/
+.agents/
+.impeccable/
+skills-lock.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
